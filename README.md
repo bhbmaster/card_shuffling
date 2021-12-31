@@ -12,5 +12,7 @@ Trying to run different mathematical analisys on different shuffling algos. So f
 Supported to run in *python 3.9* and newer:
 
 ```
-python deck.py
+python card.py       # creates decks of cards and tests things
+python deck.py       # creates decks of cards and shuffles them
+python analysis.py   # shuffles all decks of cards multiple times and provides analysis
 ```
