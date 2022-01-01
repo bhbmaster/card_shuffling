@@ -2,19 +2,19 @@
 
 PY=python
 
+function print_run_section() {
+    echo "## $PY $1 ##"
+    echo '```'
+    $PY $1
+    echo '```'
+}
+
+echo "# Example Output #"
+echo
 echo "output date: `date`"
 echo
-echo '# card.py'
-echo '```'
-$PY card.py
-echo '```'
-echo 
-echo '# deck.py'
-echo '```'
-$PY deck.py
-echo '```'
-echo 
-echo '# analysis.py'
-echo '```'
-$PY analysis.py
-echo '```'
+print_run_section "card.py"
+echo
+print_run_section "deck.py"
+echo
+print_run_section "analysis.py"
