@@ -1,6 +1,13 @@
 from card import Card
 import random
 
+# SIDENOTE: could have made easy deck like this
+# make a deck of cards using itertools
+# import itertools, random
+# deck = list(itertools.product(['ACE',2,3,4,5,6,7,8,9,10,"JACK","QUEEN","KING"],['Spade','Heart','Diamond','Club']))
+# # deck = [('ACE', 'Spade'), ('ACE', 'Heart'), ('ACE', 'Diamond'), ('ACE', 'Club'), (2, 'Spade'), (2, 'Heart'), (2, 'Diamond'), (2, 'Club'), (3, 'Spade'), (3, 'Heart'), (3, 'Diamond'), (3, 'Club'), (4, 'Spade'), (4, 'Heart'), (4, 'Diamond'), (4, 'Club'), (5, 'Spade'), (5, 'Heart'), (5, 'Diamond'), (5, 'Club'), (6, 'Spade'), (6, 'Heart'), (6, 'Diamond'), (6, 'Club'), (7, 'Spade'), (7, 'Heart'), (7, 'Diamond'), (7, 'Club'), (8, 'Spade'), (8, 'Heart'), (8, 'Diamond'), (8, 'Club'), (9, 'Spade'), (9, 'Heart'), (9, 'Diamond'), (9, 'Club'), (10, 'Spade'), (10, 'Heart'), (10, 'Diamond'), (10, 'Club'), ('JACK', 'Spade'), ('JACK', 'Heart'), ('JACK', 'Diamond'), ('JACK', 'Club'), ('QUEEN', 'Spade'), ('QUEEN', 'Heart'), ('QUEEN', 'Diamond'), ('QUEEN', 'Club'), ('KING', 'Spade'), ('KING', 'Heart'), ('KING', 'Diamond'), ('KING', 'Club')]
+# random.shuffle(deck) # can shuffle like this
+
 class Deck:
 
     def __init__(self, list_of_cards):

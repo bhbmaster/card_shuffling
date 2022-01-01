@@ -17,6 +17,7 @@ def main():
             current_deck.shuffle_deck_bridge()
             d_avg=current_deck.analysis_distance_from_same_number()
             print(f" [{i}, {d_avg:0.4f}]", end="")
+        print(current_deck)
         print()
         print()
 
