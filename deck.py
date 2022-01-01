@@ -202,8 +202,9 @@ class Deck:
         out = ""
         for i, card in enumerate(self.cards):
             out += f"{card}\t"
-            if i%cols == cols-1: # 0 1 2 3 0 1 2 3, so at every 3 we move to next line
-                out += "\n"
+            if i%cols == cols-1: # with rows/mod 4 it would look like this 0 1 2 3 0 1 2 3, so at every 3 we move to next line. however if we are at the last card don't move to next line (see nested if)
+                if i != len(self)-1: # in otherwords, prints new line only if not last card as well
+                    out += "\n"
         if print_to_screen:
             print(out)
         return out
