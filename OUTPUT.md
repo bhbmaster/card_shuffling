@@ -1,3 +1,5 @@
+output date: Sat, Jan  1, 2022 12:09:05 PM
+
 # card.py
 ```
 TEST PRODUCTION OF ALL CARDS:

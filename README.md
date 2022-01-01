@@ -16,3 +16,5 @@ python card.py       # creates decks of cards and tests things
 python deck.py       # creates decks of cards and shuffles them
 python analysis.py   # shuffles all decks of cards multiple times and provides analysis
 ```
+
+View the output in [OUTPUT.md](OUTPUT.md)
