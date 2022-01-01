@@ -3,6 +3,7 @@
 PY=python
 
 echo "output date: `date`"
+echo
 echo '# card.py'
 echo '```'
 $PY card.py

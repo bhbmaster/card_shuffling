@@ -195,8 +195,18 @@ class Deck:
     def __len__(self): # print how many cards
         return len(self.cards)
 
-    def __repr__(self): # print deck of cards
+    def __repr__(self): # print deck of cards (works as fallback for __str__ too)
         return "[ " +  ", ".join([str(i) for i in self.cards]) + " ]"
+
+    def nice_output(self, cols=13, print_to_screen=False): # nicely print cols number of cards per line. for 13 cols, should get 4 (if no joker) to 5 lines (if joker). default output is str returned, but can also print to stdout if print_to_screen=True
+        out = ""
+        for i, card in enumerate(self.cards):
+            out += f"{card}\t"
+            if i%cols == cols-1: # 0 1 2 3 0 1 2 3, so at every 3 we move to next line
+                out += "\n"
+        if print_to_screen:
+            print(out)
+        return out
 
 def test():
     List_Of_Decks = [ "D_clean", "D_joker", "D_clean_s", "D_joker_s"]
