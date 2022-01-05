@@ -192,6 +192,22 @@ class Deck:
         final_average = sum(averages) / len(averages) # mean all of the difference mean
         return final_average
 
+    def analysis_distance_from_same_suit(self):
+        averages = []
+        for s in Card._suits: # iterate thru all numbers ace thru king and joker(None) if its there
+            all_loc = self.findall_suit(s) # get list of all locations
+            if len(all_loc) == 0:
+                continue
+            diff_list = [] # get absolute value difference list [10,20,25] becomes [10,5]
+            for i,loc in enumerate(all_loc[:-1]):
+                diff = abs(all_loc[i] - all_loc[i+1])
+                diff_list.append(diff)
+            avg = sum(diff_list) / len(diff_list) # now get a standard mean of the differences
+            averages.append(avg) # note down that mean/average for that card value
+            # print(f"-- looking at all '{v}' locs:{all_loc} ds:{diff_list} avg_ds:{avg}")
+        final_average = sum(averages) / len(averages) # mean all of the difference mean
+        return final_average
+
     def __len__(self): # print how many cards
         return len(self.cards)
 
