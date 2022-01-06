@@ -19,8 +19,8 @@ def main():
         print(f"* [shuff_num, d_avg_number, d_avg_suit] = [0, {d_avg[0]:0.{percision}f}n, {d_avg[1]:0.{percision}f}s]", end="")
         for i in range(1,max_shuffles):
             # current_deck.shuffle_deck_random()
-            # current_deck.shuffle_deck_bridge()
-            current_deck.shuffle_deck_handed()
+            current_deck.shuffle_deck_bridge()
+            # current_deck.shuffle_deck_handed()
             d_avg=[ current_deck.analysis_distance_from_same_number(), current_deck.analysis_distance_from_same_suit() ]
             d_avg_list.append(d_avg)
             print(f" [{i}, {d_avg[0]:0.{percision}f}n, {d_avg[1]:0.{percision}f}s]", end="")

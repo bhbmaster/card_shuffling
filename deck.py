@@ -103,7 +103,9 @@ class Deck:
         upper_bound_size_of_chunk = 3
         shuffle_with_left_hand_first = random.choice([True, False]) # left is hand1, right is hand2
         count = len(self.cards)
-        half_index = len(self.cards) // 2
+        half_index = count // 2
+        sloppy_cut = count // 10
+        cut_index = half_index + random.randint(-sloppy_cut,sloppy_cut)  # if sloppy_cut 0 we cut at half way point cut_index
         # note: top card is index 0
         ### print(f"{half_index=} {type(half_index)}")
         half1 = self.cards[:half_index]
